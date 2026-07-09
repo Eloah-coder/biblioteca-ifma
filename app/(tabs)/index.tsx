@@ -426,6 +426,6 @@ const styles = StyleSheet.create({
 
   navLabelActive: {
     color: GREEN,
-    fontWeight: "900",
+    fontWeight: "90",
   },
 });
