@@ -7,9 +7,17 @@ const LIGHT_GREEN = "#EAF7EF";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.logo}>IFMA</Text>
-      <Text style={styles.title}>Biblioteca IFMA</Text>
-      <Text style={styles.subtitle}>Seu conhecimento começa aqui</Text>
+      <View style={styles.header}>
+        <View>
+          <Text style={styles.logo}>IFMA</Text>
+          <Text style={styles.title}>Biblioteca IFMA</Text>
+          <Text style={styles.subtitle}>Seu conhecimento começa aqui</Text>
+        </View>
+
+        <View style={styles.notification}>
+          <Text style={styles.notificationIcon}>🔔</Text>
+        </View>
+      </View>
     </View>
   );
 }
@@ -21,11 +29,19 @@ const styles = StyleSheet.create({
     padding: 20,
   },
 
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: 40,
+    marginBottom: 24,
+  },
+
   logo: {
     fontSize: 22,
     fontWeight: "900",
     color: DARK_GREEN,
-    marginBottom: 10,
+    marginBottom: 8,
   },
 
   title: {
@@ -38,5 +54,18 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#666666",
     marginTop: 5,
+  },
+
+  notification: {
+    width: 46,
+    height: 46,
+    borderRadius: 23,
+    backgroundColor: GREEN,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  notificationIcon: {
+    fontSize: 22,
   },
 });
